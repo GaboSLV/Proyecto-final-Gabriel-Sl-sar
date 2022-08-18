@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.logotp {
+  max-width: 2em;
+  max-height: 2em;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  border: solid 0.15em;
+  border-color: #eefbfb;
+}
+nav {
+  width: 100%;
+  background-color: #0a0a0aa9;
+  margin-bottom: 30px;
+  box-shadow: 10px 0px 10px;
+}
+.navcolor {
+  color: #eefbfb;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  font-family: "Rubik", sans-serif;
+}
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navcolor:visited {
+  color: rgb(255, 255, 255);
+}
+.navcolor:hover {
+  color: rgb(47, 255, 186);
+}
+.navcolor:active {
+  color: rgb(0, 17, 12);
+}
+
+.iconito {
+  background-image: url(https://i.ibb.co/rm7KQwS/pngegg.png);
+}
+.grid-cont {
+  box-shadow: 10px 0px 10px black;
+  padding-top: 20px;
+  padding-left: 1.9em;
+  padding-right: 1.9em;
+  height: auto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "copy"
+    "info"
+    "dev";
+  color: #eefbfb;
+  font-size: 1em;
+  background-color: #0a0a0ad0;
+  margin-top: auto;
+}
+.dev {
+  grid-area: dev;
+  color: #eefbfb;
+  text-align: center;
+  font-size: 10px;
+  font-family: "Red Hat Text", sans-serif;
+}
+.info a {
+  text-decoration: none;
+  color: rgb(136, 255, 229);
+}
+.info {
+  grid-area: info;
+  text-align: center;
+  font-size: 12px;
+}
+.copy {
+  grid-area: copy;
+  text-align: center;
+}
+.grid-cont p {
+  height: 100%;
+}
+
+.gridshome {
+  display: grid;
+  grid-template-columns: 67% 33%;
+  grid-template-rows: auto;
+  margin: 4% 10% 3% 10%;
+}
+
+h1 {
+  font-family: "Palanquin Dark", sans-serif;
+  color: rgb(241, 241, 241);
+}
+.alltxt {
+  font-family: "Red Hat Text", sans-serif;
+  margin: 27px 0px 27px 0px;
+  color: white;
+}
+.btn-log {
+  width: 9.5em;
+  height: 2.3em;
+  margin: 10px 0px 40px 0px;
+  border: none;
+  outline: none;
+  background-color: #01e7a6;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 40px;
+}
+.login {
+  grid-column: 2 / span 1;
+  background-color: #0f0f11d4;
+  max-width: 100%;
+  height: auto;
+  margin: 15px;
+  padding: 0px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 5px 5px 40px;
+}
+.principal {
+  background-color: #0f0f11da;
+  margin: 15px;
+  border-radius: 5px;
+  padding: 50px;
+  box-shadow: 5px 5px 30px;
+}
+.tittlelog {
+  color: white;
+  margin: 30px 0px 0px 0px;
+}
+.holders {
+  margin: 0px 0px 0px 0px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.259);
+  outline: none;
+  width: 80%;
+  height: 40px;
+  font-size: 16px;
+  color: white;
+}
+.registerp {
+  max-width: 80%;
+  color: white;
+  margin: 10px auto 0px auto;
+}
+.registerp a {
+  text-decoration: none;
+  color: #01e7a6;
+}
+br {
+  margin: 0px;
+  padding: 0px;
+}
+.btn-in {
+  margin-top: 25px;
+}
+
+.aplical {
+  margin: auto;
+  background-color: black;
+  height: 500px;
+  border-radius: 10px;
+}
+.testgrids {
+  background-color: rgba(0, 0, 0, 0.749);
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: auto;
+  color: white;
+  margin: 10%;
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: 10px 10px 40px black;
+}
+
+.parrafito {
+  width: 100%;
+  padding: 15px;
+  font-family: "Red Hat Text", sans-serif;
+  font: 20px;
+}
+
+body {
+  background-image: url(../assets/img/bgpage.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.imggg {
+  text-align: center;
+  width: 300px;
+  height: 300px;
+}
+.centrarimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.casino {
+  width: 80%;
+  background-color: black;
+  margin: 0 10% 0 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.equipoList {
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.568);
+  margin: 0 25% 0 25%;
+  border-radius: 15px;
+}
+.equipoList p{
+  padding: 0 0 0 40px;
+  color: rgb(255, 255, 255);
+}
