@@ -53,3 +53,13 @@ else {
 }
 
 }
+
+// let precio1 = parseInt(prompt("Ingresa el valor el primer precio:"))
+// let precio2 = parseInt(prompt("Ingresa el valor el primer precio:"))
+// let precio3 = parseInt(prompt("Ingresa el valor el primer precio:"))
+// let total = precio1+precio2+precio3
+// let totalDiezPorc = total-(total*0.1
+// console.log(totalDiezPorc)
+// sessionStorage.setItem ("precios", +totalDiezPorc)
+// let storageView = sessionStorage.getItem ("precios")
+// console.log (storageView)
