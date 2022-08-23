@@ -31,8 +31,8 @@ function  apuestaRealizada () {
  else {
   balance -= cantidadApostada;
   solucion = Math.random();
-  if (solucion <= 0.5) {
-    balance += (cantidadApostada*1.9);
+  if (solucion <= 0.45) {
+    balance += (cantidadApostada*2);
     ganadaoPerdida = document.getElementById("casino1");
 ganadaoPerdida.innerHTML = `
 <div class="casino">
