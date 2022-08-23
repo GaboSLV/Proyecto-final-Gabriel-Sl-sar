@@ -33,7 +33,7 @@ function  apuestaRealizada () {
   solucion = Math.random();
   if (solucion <= 0.5) {
     balance += (cantidadApostada*1.9);
-    ganadaoPerdida = document.createElement("div");
+    ganadaoPerdida = document.getElementById("casino1");
 ganadaoPerdida.innerHTML = `
 <div class="casino">
 <p>¡Felicidades! en tu moneda salió "Cara" por lo tanto ganaste. Tu balance ahora es de: ${+balance}</p> 
@@ -41,13 +41,12 @@ ganadaoPerdida.innerHTML = `
 document.getElementById("casino").appendChild(ganadaoPerdida)
    }
 else {
-  ganadaoPerdida = document.createElement("div");
+  ganadaoPerdida = document.getElementById("casino1");
   ganadaoPerdida.innerHTML = `
   <div class="casino">
   <p>Lo lamentamos, en tu moneda salió "Cruz", por lo tanto perdiste. Tu balance ahora es de: ${+balance}</p> 
   </div>`
-  
-document.getElementById("casino").appendChild(ganadaoPerdida)}
+  }
 }
 localStorage.setItem ("balance", +balance)
 let storageView = localStorage.getItem ("balance")

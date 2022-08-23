@@ -210,7 +210,7 @@ body {
 .casino {
   width: 80%;
   background-color: rgba(0, 0, 0, 0.729);
-  margin: 0 10% 0 10%;
+  margin: 30px 10% 0 10%;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -227,4 +227,7 @@ body {
 .equipoList p{
   padding: 0 0 0 40px;
   color: rgb(255, 255, 255);
+}
+.casino1 {
+  margin: 100px 0px 0px 0px;
 }
