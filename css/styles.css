@@ -111,6 +111,15 @@ h1 {
   border-radius: 5px;
   box-shadow: 4px 4px 40px;
 }
+.btnApostar {
+  border: none;
+  outline: none;
+  background-color: #01e7a6;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 4px 4px 40px;
+}
 .login {
   grid-column: 2 / span 1;
   background-color: #0f0f11d4;
@@ -132,6 +141,13 @@ h1 {
 .tittlelog {
   color: white;
   margin: 30px 0px 0px 0px;
+}
+.holdersApostar {
+  margin: 0px 30px 0px 30px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.259);
+  outline: none;
 }
 .holders {
   margin: 0px 0px 0px 0px;

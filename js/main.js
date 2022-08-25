@@ -10,9 +10,9 @@ balance = 50000;
 apuestasForm.innerHTML = `
 <div class="casino">
 <h2>¡Lanza la moneda!</h2>
-<p>En caso de ganar, ganarás el 90% extra de lo que apostaste, si pierdes, tu dinero desaparecerá de tu balance. Comienzas con un balance de $50.000</p>
-<input type="number" name="" id="dineroApostado">
-<input type="button" value="Apostar monto" id="montoApostado">
+<p>En caso de ganar, ganarás el doble de lo que apostaste, si pierdes, tu dinero desaparecerá de tu balance. Comienzas con un balance de $50.000</p>
+<input type="number" placeholder="Ingresa el monto" name="" id="dineroApostado" class="holdersApostar">
+<input type="button" value="Apostar monto" id="montoApostado" class="btnApostar">
 </div>
 `
 
@@ -26,7 +26,13 @@ function  apuestaRealizada () {
   let cantidadApostada = document.getElementById("dineroApostado").value
     if (cantidadApostada>balance) {
       console.log(balance)
-    alert("Lo lamentamos, no tienes saldo para realizar esta operación" )
+    Swal.fire({
+      icon: 'error',
+      text: "Lo lamentamos, no tienes saldo para realizar esta operación",
+      background: 'rgba(0, 0, 0, 0.70)',
+      color: 'white',  
+      confirmButtonColor: '#01e7a6',
+    });
   }
  else {
   balance -= cantidadApostada;
@@ -46,8 +52,12 @@ document.getElementById("casino").appendChild(ganadaoPerdida) ) :
   <p>Lo lamentamos, en tu moneda salió "Cruz", por lo tanto perdiste. Tu balance ahora es de: ${+balance}</p> 
   </div>`)
 }
+
+
 localStorage.setItem ("balance", +balance)
 let storageView = localStorage.getItem ("balance")
 console.log (storageView)
 }
+
+
 //Hasta acá.
