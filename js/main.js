@@ -58,6 +58,19 @@ localStorage.setItem ("balance", +balance)
 let storageView = localStorage.getItem ("balance")
 console.log (storageView)
 }
-
+function obtenerInfo () {
+  const URLGET="https://jsonplaceholder.typicode.com/posts/1/comments"
+  fetch(URLGET)
+    .then(result=>result.json() )
+    .then(info => {
+const opinions = info
+   opinions.forEach(opinion => {
+    document.getElementById("opiniones").innerHTML+=`
+   <div class=opinionesedit> <p>Email: ${opinion.email}</p>
+    <p>Opinión: ${opinion.body}</p>
+    <div>`
+   }) })
+}
+obtenerInfo()
 
 //Hasta acá.

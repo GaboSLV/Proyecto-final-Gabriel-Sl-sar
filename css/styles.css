@@ -148,6 +148,7 @@ h1 {
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.259);
   outline: none;
+  color: white;
 }
 .holders {
   margin: 0px 0px 0px 0px;
@@ -246,4 +247,14 @@ body {
 }
 .casino1 {
   margin: 100px 0px 0px 0px;
+}
+.opinionesedit {
+  color:rgb(237, 237, 237);
+  background-color: rgba(0, 0, 0, 0.805);
+  padding: 30px;
+  margin: 30px;
+  border-radius: 10px;
+}
+#opiniones {
+  padding: 100px
 }
