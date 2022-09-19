@@ -29,7 +29,7 @@
 // }
 // }
 
-
+let cuotaNueva
 let todas 
 let balance = 100000;
 function Apuestas (equipo1,cuota1,idcuota1,equipo2,cuota2,idcuota2,empate,cuotaempate,idcuotaempate) {
@@ -52,8 +52,8 @@ this.cuotaempate = cuotaempate;
 // document.getElementById("apuestasDeportivas").appendChild(balanceDom)
 let apuestas = document.createElement("div")
 apuestas.innerHTML=(`<p>Ingrese monto de apuesta </p>
-<input type="number" placeholder="Ingresa el monto" name="" id="apostarDinero" class="holdersApostar">
-<input type="button" value="Apostar monto" id="cantidadApostada" class="btnApostar">`)
+<input type="number" placeholder="Ingresa el monto" name="" id="cantidadApuesta" class="holdersApostar">
+<input type="button" value="Apostar monto" id="clickApostada" class="btnApostar">`)
 document.getElementById("apuestasDeportivas").appendChild(apuestas)
 let apuestasTodas = [
    new Apuestas ("Real Madrid", 1.5,11, "Real Betis", 2.3,12, "Empate", 3.15,13),
@@ -83,19 +83,24 @@ apuestasRender()
 // let cuotasver = new cuotasVer(cuotaTomada)
 
 const todasCuotas = document.querySelectorAll('.apuestasConfig1')
-
 todasCuotas.forEach (cuota => {
    cuota.addEventListener('click', () => {
-let cuotaUsada = cuota.innerHTML
-console.log (cuotaUsada)
+      let cuotaUsada = cuota.innerHTML
+      console.log(cuotaUsada)
+      const cantidadApuesta = document.getElementById("cantidadApuesta")
+      cantidadApuesta.addEventListener("keydown", inputUsuario)
+      function inputUsuario () {
+        let cantApuesta = cantidadApuesta.value;
+        console.log(cantApuesta)
+         }
    })
+   const clickApuesta = document.getElementById("clickApostada")
+   clickApuesta.addEventListener("click", apuestaRealizada)
+   function apuestaRealizada(cantApuesta, cuotaUsada) {
+      console.log(cantApuesta)
+      console.log(cuotaUsada)
+   }
 })
-
-
-
-
-
-
 
 
 
