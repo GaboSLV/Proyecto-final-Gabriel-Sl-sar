@@ -258,3 +258,43 @@ body {
 #opiniones {
   padding: 100px
 }
+.apuestasConfig, .apuestasConfig1
+{
+  text-align: center;
+  color: white;
+  background-color: black;
+  height: 30px;
+  width: 400px;
+  margin: 0.5px 2px 0.5px 2px;
+}
+.editarApuestas {
+width: 100%;
+display: grid;
+grid-template-columns: auto auto auto;
+grid-template-rows: 
+auto
+auto;
+justify-content: center;
+margin-bottom: 10px;
+}
+
+.apuestasConfig1:hover {
+background-color: #01e7a6;
+
+}
+.botonesHover {
+  text-align: center;
+  color: white;
+  background-color: black;
+  height: 30px;
+  margin: 0.5px 2px 0.5px 2px;
+  width: 400px;
+}
+/* .apuestasConfig {
+  display: grid;
+  grid-area: hilera1;
+}
+.apuestasConfig1 {
+  display: grid;
+  grid-area: hilera2;
+} */

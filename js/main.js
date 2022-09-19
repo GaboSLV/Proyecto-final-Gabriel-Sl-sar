@@ -1,4 +1,4 @@
-let balance;
+
 let solucion;
 let apuesta;
 let salir;
@@ -6,7 +6,7 @@ let ganadaoPerdida
 
 
 let apuestasForm = document.createElement("div");
-balance = 50000; 
+let balance = 50000; 
 apuestasForm.innerHTML = `
 <div class="casino">
 <h2>¡Lanza la moneda!</h2>
@@ -74,3 +74,5 @@ const opinions = info
 obtenerInfo()
 
 //Hasta acá.
+
+
