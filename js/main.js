@@ -25,6 +25,17 @@ function  apuestaRealizada () {
   
   let cantidadApostada = document.getElementById("dineroApostado").value
     if (balance>=cantidadApostada && cantidadApostada>0) {
+      Toastify({
+
+        text: "¡Apuesta realizada!",
+        gravity: 'top',
+        position:'right',
+        style: {
+          background: "linear-gradient(to right, #01e7a6, #01e7a8)",
+        },
+        duration: 3000
+        
+        }).showToast();
       balance -= cantidadApostada;
       solucion = Math.random();
        (solucion <= 0.45) ?
