@@ -23,12 +23,6 @@ function Apuestas(
   this.cuotaempate = cuotaempate;
 }
 
-// let balanceDom = document.createElement("div")
-// balanceDom.innerHTML=(`
-// <p>Balance: ${balance} </p>
-// <p id="cuotaTomada"></p>
-// `)
-// document.getElementById("apuestasDeportivas").appendChild(balanceDom)
 let apuestas = document.createElement("div");
 apuestas.innerHTML = `<p>Ingrese monto de apuesta </p>
 <input type="number" placeholder="Ingresa el monto" name="" id="cantidadApuesta" class="holdersApostar">
@@ -84,18 +78,12 @@ const cantidadApuesta = document.getElementById("cantidadApuesta");
 cantidadApuesta.addEventListener("blur", inputUsuario);
 function inputUsuario() {
   cantApuesta = cantidadApuesta.value;
-  console.log(cantApuesta);
 }
-
 //No retorna los valores
 const clickApuesta = document.getElementById("clickApostada");
 clickApuesta.addEventListener("click", apuestaRealizada);
 function apuestaRealizada(cantApuesta, cuotaUsada) {
   console.log(cantApuesta);
-  console.log(cuotaUsada)
+  console.log(cuotaUsada);
 }
 
-// function operacion(num1,num2) {
-//    let resultado = num1*num2
-//    console.log(resultado)
-// }
