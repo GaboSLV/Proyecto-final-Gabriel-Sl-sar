@@ -60,13 +60,7 @@ nav ul {
   background-color: #0a0a0ad0;
   margin-top: auto;
 }
-.dev {
-  grid-area: dev;
-  color: #eefbfb;
-  text-align: center;
-  font-size: 10px;
-  font-family: "Red Hat Text", sans-serif;
-}
+
 .info a {
   text-decoration: none;
   color: rgb(136, 255, 229);
@@ -261,11 +255,12 @@ body {
 .apuestasConfig, .apuestasConfig1
 {
   text-align: center;
-  color: white;
-  background-color: black;
+  color: rgb(241, 241, 241);
+  background-color: rgba(0, 0, 0, 0.827);
   height: 30px;
   width: 400px;
   margin: 0.5px 2px 0.5px 2px;
+  border: 0px;
 }
 .editarApuestas {
 width: 100%;
@@ -282,19 +277,66 @@ margin-bottom: 10px;
 background-color: #01e7a6;
 
 }
-.botonesHover {
-  text-align: center;
+
+.balanceContainer {
+  width: 100%;
+margin: 0 auto;
+display: grid;
+place-content: center;
+
+}
+.balanceParrafo {
+  padding: 10px;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: rgba(6, 6, 6, 0.863);
+  display: grid;
+  place-items: center;
+  height: 50px;
+  font-size: 23px;
+  border-radius: 10px;
+}
+.devolucionApuesta {
   color: white;
   background-color: black;
-  height: 30px;
-  margin: 0.5px 2px 0.5px 2px;
-  width: 400px;
-}
-/* .apuestasConfig {
+  width: 50%;
+  border-radius: 15px;
+  padding: 20px 0 20px 20px;
+  margin-top: 10px;
+
   display: grid;
-  grid-area: hilera1;
+grid-template-columns: 50% 50%;
+grid-template-areas: "grid1 grid2";
+grid-template-rows: auto;
 }
-.apuestasConfig1 {
-  display: grid;
-  grid-area: hilera2;
-} */
+.grid1 {
+  grid-area: "grid1";
+}
+.grid2 {
+  grid-area: "grid2";
+}
+.imagenLogo {
+  width: 150px;
+  height: 150px;
+}
+.centerApuesta {
+  display: flex;
+justify-content: center;
+margin-bottom: 30px;
+margin-top: 30px;
+}
+.tittleApuestasDep {
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+.manejadorDeApuestas {
+background-color: black;
+padding: 30px;
+margin-top: 30px;
+width: 35%;
+border-radius: 0px 15px 15px 0px;
+}
+.montoDeApuesta {
+  font-size: 32px;
+  color: white;
+}

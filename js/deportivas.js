@@ -23,9 +23,9 @@ function Apuestas(
 }
 
 let apuestas = document.createElement("div");
-apuestas.innerHTML = `<p>Ingrese monto de apuesta </p>
+apuestas.innerHTML = `<div class="manejadorDeApuestas"><p class="montoDeApuesta">Ingrese monto de apuesta </p>
 <input type="number" placeholder="Ingresa el monto" name="" id="cantidadApuesta" class="holdersApostar">
-<input type="button" value="Apostar monto" id="clickApostada" class="btnApostar">`;
+<input type="button" value="Apostar monto" id="clickApostada" class="btnApostar"></div>`;
 document.getElementById("apuestasDeportivas").appendChild(apuestas);
 let apuestasTodas = [
   new Apuestas(
@@ -60,9 +60,9 @@ function apuestasRender() {
 }
 apuestasRender();
 
-let cuotaUsada
-let cantApuesta
-let posibleGanancia
+let cuotaUsada;
+let cantApuesta;
+let posibleGanancia;
 const todasCuotas = document.querySelectorAll(".apuestasConfig1");
 todasCuotas.forEach((cuota) => {
   //Al clickear tomo el valor de la cuota que elijo.
@@ -71,8 +71,11 @@ todasCuotas.forEach((cuota) => {
     console.log(cuotaUsada);
 
   });
-  
 });
+
+
+let balanceDom = document.getElementById("balanceDivision")
+balanceDom.innerHTML = `<div class="balanceContainer"><p class="balanceParrafo">Balance: $${balance}</p></div>`
 //Me devuelve el valor del monto apostado.
 const cantidadApuesta = document.getElementById("cantidadApuesta");
 cantidadApuesta.addEventListener("blur", inputUsuario);
@@ -84,8 +87,8 @@ function inputUsuario() {
 const clickApuesta = document.getElementById("clickApostada");
 clickApuesta.addEventListener("click", apuestaRealizada);
 function apuestaRealizada() {
-
 if (balance>=cantApuesta && cuotaUsada!=undefined && cantApuesta>0){
+
   Toastify({
 
     text: "¡Apuesta realizada!",
@@ -102,13 +105,21 @@ posibleGanancia = cuotaUsada*cantApuesta
 console.log(posibleGanancia)
 console.log(balance)
 let contenido = document.createElement("div");
-contenido.innerHTML = `  
-<div class=devolucionApuesta><p>¡Apuesta realizada!</p>
-<p>Monto apostado: ${cantApuesta}</p>
+contenido.innerHTML = `<div class="centerApuesta"><div class=devolucionApuesta>
+<div class="grid1">
+<p>¡Apuesta realizada!</p>
+<p>Monto apostado: $${cantApuesta}</p>
 <p>Cuota ganadora: ${cuotaUsada} </p>
-<p>Ganancia posible: ${posibleGanancia} </p>
-</div>`;
+<p>Ganancia posible: $${posibleGanancia} </p>
+</div>
+<div class="grid2">
+<img src="../assets/img/vibes logo2.png" alt="" class="imagenLogo">
+</div>
+</div></div>`;
 document.getElementById("apuestasDeportivas").appendChild(contenido);
+let total = balance
+let balanceDom = document.getElementById("balanceDivision")
+balanceDom.innerHTML = `<div class="balanceContainer"><p class="balanceParrafo">Balance: $${total}</p></div>`
 }
 else if (cuotaUsada==undefined) {
   Swal.fire({
