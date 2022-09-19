@@ -7,6 +7,8 @@ let ganadaoPerdida
 
 let apuestasForm = document.createElement("div");
 let balance = 50000; 
+let balanceDom = document.getElementById("casino2")
+balanceDom.innerHTML = `<div class="balanceContainer"><p class="balanceParrafo">Balance: $${balance}</p></div>`
 apuestasForm.innerHTML = `
 <div class="casino">
 <h2>¡Lanza la moneda!</h2>
@@ -52,7 +54,9 @@ function  apuestaRealizada () {
       <div class="casino">
       <p>Lo lamentamos, en tu moneda salió "Cruz", por lo tanto perdiste. Tu balance ahora es de: ${+balance}</p> 
       </div>`)
-    
+      let total= balance
+      balanceDom = document.getElementById("casino2")
+      balanceDom.innerHTML = `<div class="balanceContainer"><p class="balanceParrafo">Balance: $${total}</p></div>`
   }
   else if (cantidadApostada<=0) {
     Swal.fire({
@@ -87,9 +91,9 @@ function obtenerInfo () {
 const opinions = info
    opinions.forEach(opinion => {
     document.getElementById("opiniones").innerHTML+=`
-   <div class=opinionesedit> <p>Email: ${opinion.email}</p>
+ <div class="centerApuesta">  <div class=opinionesedit> <p class="anadirPadding">Email: ${opinion.email}</p>
     <p>Opinión: ${opinion.body}</p>
-    <div>`
+    <div></div>`
    }) })
 }
 obtenerInfo()

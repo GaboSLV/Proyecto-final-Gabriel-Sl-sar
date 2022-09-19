@@ -243,11 +243,15 @@ body {
   margin: 100px 0px 0px 0px;
 }
 .opinionesedit {
+  width: 80%;
   color:rgb(237, 237, 237);
   background-color: rgba(0, 0, 0, 0.805);
   padding: 30px;
-  margin: 30px;
+  margin-bottom: 30px;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #opiniones {
   padding: 100px
@@ -289,7 +293,7 @@ place-content: center;
   padding: 10px;
   width: 100%;
   color: rgb(255, 255, 255);
-  background-color: rgba(6, 6, 6, 0.863);
+  background-color: rgba(6, 6, 6, 0.757);
   display: grid;
   place-items: center;
   height: 50px;
@@ -340,3 +344,4 @@ border-radius: 0px 15px 15px 0px;
   font-size: 32px;
   color: white;
 }
+.anadirPadding {padding:30px}
