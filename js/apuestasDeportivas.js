@@ -1,4 +1,3 @@
-
 let cuotaNueva;
 let todas;
 let balance = 100000;
@@ -68,31 +67,35 @@ function apuestasRender() {
 }
 apuestasRender();
 
-function valorCuota() {
+let cuotaUsada
+let cantApuesta
 const todasCuotas = document.querySelectorAll(".apuestasConfig1");
 todasCuotas.forEach((cuota) => {
   //Al clickear tomo el valor de la cuota que elijo.
   cuota.addEventListener("click", () => {
-    let cuotaUsada = cuota.innerHTML;
+    cuotaUsada = cuota.innerHTML;
+    console.log(cuotaUsada);
+
   });
-
-})};
+  
+});
 //Me devuelve el valor del monto apostado.
-function inputUsuario() {
-   const cantidadApuesta = document.getElementById("cantidadApuesta");
+const cantidadApuesta = document.getElementById("cantidadApuesta");
 cantidadApuesta.addEventListener("blur", inputUsuario);
-  let cantApuesta = cantidadApuesta.value;
+function inputUsuario() {
+  cantApuesta = cantidadApuesta.value;
+  console.log(cantApuesta);
 }
-
 
 //No retorna los valores
 const clickApuesta = document.getElementById("clickApostada");
 clickApuesta.addEventListener("click", apuestaRealizada);
 function apuestaRealizada(cantApuesta, cuotaUsada) {
-   valorCuota();
-   inputUsuario();
-let valor1 = cantApuesta
-let valor2 = cuotaUsada
-let total = valor1*valor2
-console.log(valor1)
+  console.log(cantApuesta);
+  console.log(cuotaUsada)
 }
+
+// function operacion(num1,num2) {
+//    let resultado = num1*num2
+//    console.log(resultado)
+// }
