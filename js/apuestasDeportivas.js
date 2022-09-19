@@ -1,5 +1,4 @@
-let cuotaNueva;
-let todas;
+
 let balance = 100000;
 function Apuestas(
   equipo1,
@@ -78,6 +77,7 @@ const cantidadApuesta = document.getElementById("cantidadApuesta");
 cantidadApuesta.addEventListener("blur", inputUsuario);
 function inputUsuario() {
   cantApuesta = cantidadApuesta.value;
+  console.log(cantApuesta)
 }
 //No retorna los valores
 const clickApuesta = document.getElementById("clickApostada");
