@@ -45,7 +45,7 @@ let apuestasTodas = [
 
 function apuestasRender() {
   for (const apuestas of apuestasTodas) {
-    lista = document.getElementById("editApuestas");
+  let  lista = document.getElementById("editApuestas");
     lista.innerHTML += ` <div class="editarApuestas">
 <div class="apuestasConfig">
   <p>${apuestas.equipo1}</p>
@@ -62,6 +62,7 @@ apuestasRender();
 
 let cuotaUsada
 let cantApuesta
+let posibleGanancia
 const todasCuotas = document.querySelectorAll(".apuestasConfig1");
 todasCuotas.forEach((cuota) => {
   //Al clickear tomo el valor de la cuota que elijo.
@@ -79,11 +80,64 @@ function inputUsuario() {
   cantApuesta = cantidadApuesta.value;
   console.log(cantApuesta)
 }
-//No retorna los valores
+//Toma los valores y los imprime
 const clickApuesta = document.getElementById("clickApostada");
 clickApuesta.addEventListener("click", apuestaRealizada);
-function apuestaRealizada(cantApuesta, cuotaUsada) {
-  console.log(cantApuesta);
-  console.log(cuotaUsada);
+function apuestaRealizada() {
+
+if (balance>=cantApuesta && cuotaUsada!=undefined && cantApuesta>0){
+  Toastify({
+
+    text: "¡Apuesta realizada!",
+    gravity: 'top',
+    position:'right',
+    style: {
+      background: "linear-gradient(to right, #01e7a6, #01e7a8)",
+    },
+    duration: 3000
+    
+    }).showToast();
+balance-= cantApuesta
+posibleGanancia = cuotaUsada*cantApuesta
+console.log(posibleGanancia)
+console.log(balance)
+let contenido = document.createElement("div");
+contenido.innerHTML = `  
+<div class=devolucionApuesta><p>¡Apuesta realizada!</p>
+<p>Monto apostado: ${cantApuesta}</p>
+<p>Cuota ganadora: ${cuotaUsada} </p>
+<p>Ganancia posible: ${posibleGanancia} </p>
+</div>`;
+document.getElementById("apuestasDeportivas").appendChild(contenido);
+}
+else if (cuotaUsada==undefined) {
+  Swal.fire({
+    icon: 'error',
+    text: "Por favor, elige una cuota antes de realizar la operación",
+    background: 'rgba(0, 0, 0, 0.70)',
+    color: 'white',  
+    confirmButtonColor: '#01e7a6',
+  });
+}
+else if (cantApuesta<=0)  {
+  Swal.fire({
+    icon: 'error',
+    text: "Por favor ingrese un valor mayor a 0",
+    background: 'rgba(0, 0, 0, 0.70)',
+    color: 'white',  
+    confirmButtonColor: '#01e7a6',
+  });
+}
+else {
+  Swal.fire({
+    icon: 'error',
+    text: "Lo lamentamos, no tienes saldo para realizar esta operación",
+    background: 'rgba(0, 0, 0, 0.70)',
+    color: 'white',  
+    confirmButtonColor: '#01e7a6',
+  });
+  
+}
+
 }
 

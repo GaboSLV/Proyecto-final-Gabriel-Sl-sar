@@ -24,33 +24,43 @@ let montoApostClick = document.getElementById("montoApostado");
 function  apuestaRealizada () {
   
   let cantidadApostada = document.getElementById("dineroApostado").value
-    if (cantidadApostada>balance) {
-      console.log(balance)
+    if (balance>=cantidadApostada && cantidadApostada>0) {
+      balance -= cantidadApostada;
+      solucion = Math.random();
+       (solucion <= 0.45) ?
+       ( balance += (cantidadApostada*2),
+        ganadaoPerdida = document.getElementById("casino1"),
+    ganadaoPerdida.innerHTML = `
+    <div class="casino">
+    <p>¡Felicidades! en tu moneda salió "Cara" por lo tanto ganaste. Tu balance ahora es de: ${+balance}</p> 
+    </div>`,
+    document.getElementById("casino").appendChild(ganadaoPerdida) ) :
+    
+      (ganadaoPerdida = document.getElementById("casino1"),
+      ganadaoPerdida.innerHTML = `
+      <div class="casino">
+      <p>Lo lamentamos, en tu moneda salió "Cruz", por lo tanto perdiste. Tu balance ahora es de: ${+balance}</p> 
+      </div>`)
+    
+  }
+  else if (cantidadApostada<=0) {
     Swal.fire({
       icon: 'error',
-      text: "Lo lamentamos, no tienes saldo para realizar esta operación",
+      text: "Por favor utilize un valor mayor a 0.",
       background: 'rgba(0, 0, 0, 0.70)',
       color: 'white',  
       confirmButtonColor: '#01e7a6',
     });
   }
  else {
-  balance -= cantidadApostada;
-  solucion = Math.random();
-   (solucion <= 0.45) ?
-   ( balance += (cantidadApostada*2),
-    ganadaoPerdida = document.getElementById("casino1"),
-ganadaoPerdida.innerHTML = `
-<div class="casino">
-<p>¡Felicidades! en tu moneda salió "Cara" por lo tanto ganaste. Tu balance ahora es de: ${+balance}</p> 
-</div>`,
-document.getElementById("casino").appendChild(ganadaoPerdida) ) :
-
-  (ganadaoPerdida = document.getElementById("casino1"),
-  ganadaoPerdida.innerHTML = `
-  <div class="casino">
-  <p>Lo lamentamos, en tu moneda salió "Cruz", por lo tanto perdiste. Tu balance ahora es de: ${+balance}</p> 
-  </div>`)
+  console.log(balance)
+  Swal.fire({
+    icon: 'error',
+    text: "Lo lamentamos, no tienes saldo para realizar esta operación",
+    background: 'rgba(0, 0, 0, 0.70)',
+    color: 'white',  
+    confirmButtonColor: '#01e7a6',
+  });
 }
 
 
