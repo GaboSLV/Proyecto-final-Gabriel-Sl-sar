@@ -13,6 +13,9 @@ contrasena = pass.value
 console.log(usuario)
 console.log(contrasena)
 console.log(datos)
+
+//Si los datos de usuario son correctos me redirige a la página de casino.
+
 if (usuario==="Coder" && contrasena==="123") {
     window.location.href = "./pages/casino.html";
 }
