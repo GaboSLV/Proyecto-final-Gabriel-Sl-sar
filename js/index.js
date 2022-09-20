@@ -14,7 +14,7 @@ console.log(usuario)
 console.log(contrasena)
 console.log(datos)
 if (usuario==="Coder" && contrasena==="123") {
-    window.location.href = "../pages/casino.html";
+    window.location.href = "./pages/casino.html";
 }
 else {
     Swal.fire({
