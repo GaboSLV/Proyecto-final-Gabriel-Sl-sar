@@ -6,7 +6,11 @@ let ganadaoPerdida
 
 
 let apuestasForm = document.createElement("div");
-let balance = 50000; 
+let balance = 50000;
+ 
+localStorage.setItem ("balance", +balance)
+let storageView = localStorage.getItem ("balance")
+console.log (storageView)
 let balanceDom = document.getElementById("casino2")
 balanceDom.innerHTML = `<div class="balanceContainer"><p class="balanceParrafo">Balance: $${balance}</p></div>`
 apuestasForm.innerHTML = `
@@ -21,7 +25,6 @@ apuestasForm.innerHTML = `
 document.getElementById("casino").appendChild(apuestasForm)
 let montoApostClick = document.getElementById("montoApostado");
   montoApostClick.addEventListener("click", apuestaRealizada)
-
 //Apenas doy click se ejecuta esta porción de código.
 function  apuestaRealizada () {
   
@@ -36,7 +39,7 @@ function  apuestaRealizada () {
           background: "linear-gradient(to right, #01e7a6, #01e7a8)",
         },
         duration: 3000
-        
+   
         }).showToast();
       balance -= cantidadApostada;
       solucion = Math.random();
@@ -55,8 +58,13 @@ function  apuestaRealizada () {
       <p>Lo lamentamos, en tu moneda salió "Cruz", por lo tanto perdiste. Tu balance ahora es de: ${+balance}</p> 
       </div>`)
       let total= balance
+      localStorage.setItem ("balance", +balance)
+      let storageView = localStorage.getItem("balance")
+      total = storageView
+      console.log(total)
       balanceDom = document.getElementById("casino2")
       balanceDom.innerHTML = `<div class="balanceContainer"><p class="balanceParrafo">Balance: $${total}</p></div>`
+
   }
   else if (cantidadApostada<=0) {
     Swal.fire({
@@ -68,7 +76,6 @@ function  apuestaRealizada () {
     });
   }
  else {
-  console.log(balance)
   Swal.fire({
     icon: 'error',
     text: "Lo lamentamos, no tienes saldo para realizar esta operación",
@@ -79,9 +86,7 @@ function  apuestaRealizada () {
 }
 
 
-localStorage.setItem ("balance", +balance)
-let storageView = localStorage.getItem ("balance")
-console.log (storageView)
+
 }
 function obtenerInfo () {
   const URLGET="https://jsonplaceholder.typicode.com/posts/1/comments"

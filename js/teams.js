@@ -30,11 +30,12 @@ const equipos= [
 
 let buscadorSite = document.createElement("div");
 buscadorSite.innerHTML = 
-`        
+`   <div class=navegador>
 <h2>Ingresa el nombre del equipo que deseas buscar</h2>
+<p>En este apartado podrás encontrar información sobre los equipos a los que deseas apostar, sus últimos cinco partidos, su capitán y su jugador estrella.</p>
 <p>La cantidad de equipos cargados es de: ${+equipos.length}</p>
-<input type="text" name="Nombre del equipo" id="equipo">
-<input type="button" value="Enviar" id="enviarInfo">`;
+<input type="text" class="holderStyle" name="Nombre del equipo" id="equipo">
+<input type="button" class="btnStyle" value="Enviar" id="enviarInfo"></div>`;
 document.getElementById("buscadorDiv").appendChild(buscadorSite);
 let btnEnviar = document.getElementById("enviarInfo");
 btnEnviar.addEventListener("click", buscador);

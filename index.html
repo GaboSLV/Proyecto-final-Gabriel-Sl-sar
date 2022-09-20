@@ -79,19 +79,19 @@
       <div class="containerlog">
         <h2 class="tittlelog">¡Registrate!</h2><br>
         <form action="">
-          <input type="text" name="" id="" class="holders" placeholder="Email"><br>
-          <input type="text" name="" id="" class="holders" placeholder="Usuario"><br>
-          <input type="password" name="" id="" placeholder="Contraseña" class="holders"><br>
+          <input type="text" name="" class="holders" placeholder="Email"><br>
+          <input type="text" name="" class="holders" placeholder="Usuario"><br>
+          <input type="password" name="" placeholder="Contraseña" class="holders"><br>
           <p class="registerp">¿Aceptas los <a href="#">términos y condiciones</a> de uso?</p>
           <input type="checkbox"><br>
           <button class="btn-log">Registrarse</button><br>
         </form>
         <h3 class="tittlelog">Inicia sesión</h3><br>
         <form action="">
-          <input type="text" name="" id="" class="holders" placeholder="Usuario"><br>
-          <input type="password" name="" id="" placeholder="Contraseña" class="holders">
+          <input type="text" name="" id="usuario" class="holders" placeholder="Usuario"><br>
+          <input type="password" name="" id="contra" placeholder="Contraseña" class="holders">
           <br>
-          <button class="btn-log btn-in">Login</button>
+          <button class="btn-log btn-in" id="login">Login</button>
         </form>
       </div> 
       </section>
@@ -111,5 +111,7 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/index.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

@@ -105,7 +105,7 @@ h1 {
   border-radius: 5px;
   box-shadow: 4px 4px 40px;
 }
-.btnApostar {
+.btnApostar, .btnStyle {
   border: none;
   outline: none;
   background-color: #01e7a6;
@@ -114,6 +114,7 @@ h1 {
   padding: 5px;
   box-shadow: 4px 4px 40px;
 }
+
 .login {
   grid-column: 2 / span 1;
   background-color: #0f0f11d4;
@@ -152,6 +153,18 @@ h1 {
   outline: none;
   width: 80%;
   height: 40px;
+  font-size: 16px;
+  color: white;
+}
+.holderStyle {
+  margin: 0px 0px 0px 0px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.259);
+  outline: none;
+  width: 30%;
+  height: 40px;
+  margin-right: 30px;
   font-size: 16px;
   color: white;
 }
@@ -347,5 +360,11 @@ border-radius: 0px 15px 15px 0px;
 .anadirPadding {padding:30px}
 .opinedit {
   color: white;
-  padding-bottom: 40px;
+  padding-bottom: 4g0px;
+}
+.navegador {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.579);
+padding: 40px;
+margin-bottom: 30px;
 }
